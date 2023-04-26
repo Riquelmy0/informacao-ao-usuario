@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Babylonica&family=Bebas+Neue&family=Catamaran:wght@700&family=Chivo+Mono:wght@200&family=Dancing+Script&family=Gajraj+One&family=Gloock&family=Heebo:wght@400;500;700&family=Lato:wght@700&family=League+Spartan:wght@400;600;700&family=Montserrat:wght@300&family=Noto+Sans:ital@1&family=Open+Sans:ital,wght@0,500;1,400&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200&family=Raleway:ital,wght@0,400;1,300&family=Schibsted+Grotesk&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*parte-fundo de body+image*/
+body {
+    background-color: #121214;
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-news {
+    background-image: url(../icones/read_news.jpg);
+    background-size: cover;
+    background-position: 70% 60%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 45vw;
+    z-index: 0;
+}
+
+/*término*/
+
+
+/*envolve logo, texto central, label, input, button*/
+
+.div-geral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 50vw;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.logo {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position-texts {
+    color: #A8A8A8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    font-family: 'League Spartan';
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: default;
+}
+
+.h2-text {
+    color: #04D361;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.p1 {
+    color: white;
+}
+
+.p2 {
+    word-break: break-word;
+}
+
+.information {
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.information label {
+    font-size: 20px;
+}
+
+.div-email {
+    width: 60vw;
+    height: 50px;
+    background-color: #04D361;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 10px 10px 15px black;
+    border: none;
+    z-index: 1;
+}
+
+.div-email input {
+    width: 91%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 8%;
+    border: none;
+    background-color: #8257e5;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-submit:hover {
+    background-color: #6d4db7;
+}
+
+.a-text {
+    bottom: 140px;
+    display: flex;
+    align-items: center;
+    color: rgb(174, 6, 230);
+    margin-top: 50px;
+}
+
+.submit-ok {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0, 0.2);
+    z-index: 2;
+    display: none;
+    justify-content: flex-end;
+}
+
+.submit-ok span {
+    height: 90px;
+    width: 190px;
+    background-color: #04D361;
+    color: white;
+    font-family: 'League Spartan';
+    display: flex;
+    place-items: center;
+    border: none;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    animation: animacao 8s;
+}
+
+@keyframes animacao {
+    0% {
+        display: none;
+        transform: translateX(0);
+    }
+
+    1% {
+        display: flex;
+    }
+
+    20% {
+        transform: translateX(-50px);
+    }
+
+    40% {
+        transform: translateX(-50px);
+    }
+
+    60% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*##reponsividade##*/
+
+@media(max-width: 740px) {
+
+    body {
+        justify-content: center;
+    }
+
+    .image-news {
+        display: none;
+    }
+
+    .div-geral {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        padding-left: 15px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .div-email {
+        width: 100%;
+    }
+
+    .button-submit {
+        width: 12%;
+    }
+}
